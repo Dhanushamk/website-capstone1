@@ -4,6 +4,9 @@ metadata:
   name: cap-deployment
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: cap-deployment
   template:
     metadata:
       labels:
