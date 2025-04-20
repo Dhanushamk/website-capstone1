@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cap-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: cap-deployment
+    spec:
+      containers:
+      - name: cap-deployment
+        image: dhanushamk/capproj2
+        ports:
+        - containerPort: 80
